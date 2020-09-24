@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.red {
+  border: 1px solid red;
+}
+
+.stats-or-delete {
+  color: #61dafb;
+  cursor: pointer;
+}
+
+.dont-show-component {
+  display:none;
+}
+
+.show-component {
+  border: 1px solid red;
+}
