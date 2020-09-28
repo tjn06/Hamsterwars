@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
-import '../..//styles/stats.css';
+import '../../styles/stats.scoped.css';
 
 import Allhamsters from './Allhamsters';
 import Statsmobile from './Statsmobile';
@@ -13,7 +13,7 @@ function Stats() {
 
   const ALLSTATSDESKTOP = 'allStatsDesktop', STATSMOBILE = 'Statsmobile', KILLIT = 'Killit';
 
-  function screenAndHamsterAllStats (screenAllhamsters, hamsterDelete) {
+  function screenAndHamsterAllStats(screenAllhamsters, hamsterDelete) {
     setCurrentScreen(screenAllhamsters);
     setDeleteHamster(hamsterDelete)
   }
@@ -26,23 +26,23 @@ function Stats() {
     <div className="">
       <Statsmobile />
       <div className={`${cssShowHide}`}><Allhamsters screenAndHamster={screenAndHamsterAllStats}
-      setDeleteHamsterFromAllHamsters={setDeleteHamster}/></div>
-      <div><Topstrongest/></div>
-      <div><Topsweakest/></div>
-  </div>
+        setDeleteHamsterFromAllHamsters={setDeleteHamster} /></div>
+      <div><Topstrongest /></div>
+      <div><Topsweakest /></div>
+    </div>
   )
 
   let content = null;
   switch (currentScreen) {
     case ALLSTATSDESKTOP:
-      content = ( allStatsDesktop )
-        break;
+      content = (allStatsDesktop)
+      break;
     case KILLIT:
-      content = ( <Killit item={deleteHamster}
-      setCurrentScreenInKillit={setCurrentScreen}/> )
-        break;
+      content = (<Killit item={deleteHamster}
+        setCurrentScreenInKillit={setCurrentScreen} />)
+      break;
     default:
-      content = ( allStatsDesktop )
+      content = (allStatsDesktop)
   }
 
   return (
