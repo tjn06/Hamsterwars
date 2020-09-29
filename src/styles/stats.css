@@ -105,11 +105,7 @@
     }
     
     .container {
-<<<<<<< HEAD
-      background-image: url(../pics/desktop-background.svg);
-=======
       background-image: url(/src/pics/desktop-background.svg);
->>>>>>> master
       box-shadow: inset 0px 0px 75px 50px #0D061B;
       background-repeat: no-repeat;
       background-size: cover;
