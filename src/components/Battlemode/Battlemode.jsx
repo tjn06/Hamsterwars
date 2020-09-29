@@ -1,13 +1,21 @@
-import React from 'react'
+import React from 'react';
+import '../../styles/battlemode.css';
 // import { Link } from 'react-router-dom'
 
 function Battlemode() {
     return (
-      
-        <div style={{ padding: 20 }}>
-        <h2>Battlemode</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+      <div className="container-fight">
+      <h1 className="stats">FIGHT</h1>
+      <div className="hamster-fight-1">
+        <h2 className="hamster-fight-1-name">HamsterName1</h2>
+        <img className="hamster-pic-1" src="../pics/hamster-1.svg" alt=""/>
+        </div>
+        <div className="versus">VS</div>
+      <div className="hamster-fight-2" >
+        <img className="hamster-pic-2" src="../pics/hamster-2.svg" alt=""/>
+        <h2 className="hamster-fight-2-name">HamsterName2</h2>
       </div>
+  </div>
     );
   }
 

@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.container-fight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/public/pics/mobil-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .fight {
+    text-align: center;
+    font-family: Trade Winds;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 68px;
+    line-height: 93px;
+    background: -webkit-linear-gradient(-86deg, #c94d4b 56%, #FEDCA9 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffffff;
+    text-shadow: 0px 0px 70px #FEDCA9;
+    padding-top: 80px;
+    padding-bottom: 10px;
+    -webkit-animation: action 0.5s infinite  alternate;
+    animation: action 0.7s infinite  alternate;
+  }
+
+  .versus {
+    font-family: Teko;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 120px;
+    background: -webkit-linear-gradient(-86deg, #c94d4b 56%, #FEDCA9 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffffff;
+    text-shadow: 0px 0px 70px #FEDCA9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-animation: action 0.5s infinite  alternate;
+    animation: action 0.7s infinite  alternate;
+    opacity: 0.9;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    transform: rotate(-0.57deg);
+    text-align: center;
+    z-index: 100;
+  }
+
+  .hamster-fight-1 {
+    align-self: flex-start;
+    margin-left: 20%;
+  }
+
+  .hamster-fight-2 {
+    align-self: flex-end;
+    margin-right: 20%;
+  }
+
+  .hamster-fight-1-name {
+    font-family: Trade Winds;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 3px #FFFFFF;
+    transform: rotate(-0.57deg);
+    align-self: flex-start;
+  }
+
+  .hamster-fight-2-name {
+    font-family: Trade Winds;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 42px; 
+    color: #FFFFFF;
+    text-shadow: 0px 0px 3px #FFFFFF;
+    transform: rotate(-0.57deg);  
+    align-self: flex-end;
+  }
+
+  .hamster-pic-1 {
+    height: 200px;
+    width: 300px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 25px 8px #F0B587;
+    border-radius: 3px;
+  }
+
+  .hamster-pic-2 {
+    height: 200px;
+    width: 300px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 25px 8px #F0B587;
+    border-radius: 3px;
+  }
+
+  @-webkit-keyframes action {
+    0% { transform: translateY(-4px); }
+    100% { transform: translateY(4px); }
+  }
+  @keyframes action {
+      0% { transform: translateY(-4px); }
+      100% { transform: translateY(4px); }
+  }
