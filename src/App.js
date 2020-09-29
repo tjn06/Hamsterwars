@@ -7,6 +7,7 @@ import Add from './components/Add';
 import Stats from './components/Stats/Stats';
 import Battlemode from './components/Battlemode/Battlemode';
 import Winner from './components/Battlemode/Winner';
+import Killit from './components/Stats/Delete/Killit';
 
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/stats" element={<Stats />} />
         <Route path="/battlemode" element={<Battlemode />} />
         <Route path="/Winner" element={<Winner />} />
+        <Route path="/Killit" element={<Killit />} />
       </Routes>
     </Router>
   );
