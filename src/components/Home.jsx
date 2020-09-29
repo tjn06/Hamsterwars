@@ -5,7 +5,7 @@ function Home() {
     return (
       <div className="container">
         <div className="main-container">
-          <div className="logo"><img src="/public/pics/logo.svg" alt="" /></div>
+          <div className="logo"><img src="/src/pics/logo.svg" alt="" /></div>
           <div className="titles">
             <div className="title-1">
               <h2>DECIDE</h2><h3>THEIR DESTINY...</h3>
