@@ -103,7 +103,7 @@
     }
     
     .container {
-      background-image: url(/public/pics/desktop-background.svg);
+      background-image: url(/src/pics/desktop-background.svg);
       box-shadow: inset 0px 0px 75px 50px #0D061B;
       background-repeat: no-repeat;
       background-size: cover;
