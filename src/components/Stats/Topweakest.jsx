@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
-
+import '../../styles/topWeakest.scoped.css';
 function Topweakest() {
     return (
       <div className="container">

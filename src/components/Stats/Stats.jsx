@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import '../../styles/stats.css';
-=======
 import '../../styles/stats.scoped.css';
->>>>>>> origin/Pontus-dev
 
 import Allhamsters from './Allhamsters';
 import Statsmobile from './Statsmobile';

@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-/* import './App.css'; */
-=======
 //import './App.css';
->>>>>>> origin/Pontus-dev
 
 import Header from './components/Header';
 import Home from './components/Home';

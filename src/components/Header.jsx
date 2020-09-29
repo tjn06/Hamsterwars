@@ -1,23 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import '../styles/header.scoped.css';
 
-function Header() {
-    return (
-      <nav style={{ margin: 10 }}>
-        <Link to="/" style={{ padding: 5 }}>
-          Home
-        </Link>
-        <Link to="/add" style={{ padding: 5 }}>
-          Add Hamster
-        </Link>
-        <Link to="/stats" style={{ padding: 5 }}>
-          Hamster stats
-        </Link>
-        <Link to="/battlemode" style={{ padding: 5 }}>
-          Battlemode
-        </Link>
-      </nav>
-    );
-  }
-
+      function Header() {
+        return (
+          <nav style={{ }}>
+            <NavLink to="/" activeClassName="active" end >
+              Home
+            </NavLink>
+            <NavLink to="/add" activeClassName="active"  >
+              Add Hamster
+            </NavLink>
+            <NavLink to="/stats" activeClassName="active"  >
+              Hamster stats
+            </NavLink>
+            <NavLink to="/battlemode" activeClassName="active"  >
+              Battlemode
+            </NavLink>
+          </nav>
+        );
+      }
+  
+  
 export default Header;
