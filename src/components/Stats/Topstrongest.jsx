@@ -8,8 +8,6 @@ function Topstrongest({showHideFromStatsMobile, sendPoint}) {
   useEffect(() => {
     if (sendPoint === 'xs') {
       setShowOrHideButton('back-to-stats')
-      console.log(showOrHideButton)
-      console.log(sendPoint)
     } else {
       setShowOrHideButton('none')
     }

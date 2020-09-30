@@ -1,24 +1,26 @@
 import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import Ko from './Ko';
+import UseBreakpoints from '../UseBreakpoint';
 
 function Killit({item, setCurrentScreenInKillit, sendPoint}) {
+  const point = UseBreakpoints();
 
-  let desktopOrMobile = '';
+  const [desktopOrMobile, setDesktopOrMobile] = useState();
 
   useEffect(() => {
-    if (sendPoint === 'xs') {
-      desktopOrMobile = 'Statsmobile';
+    if (point === 'xs') {
+      setDesktopOrMobile('Statsmobile');
     } else {
-      desktopOrMobile = 'allStatsDesktop'
+      setDesktopOrMobile('allStatsDesktop');
     }
-  }, [sendPoint]);
+  }, [point]);
 
   const [ifKilled, setIfKilled] = useState(false);
     if (!ifKilled) {
       return (
         <div>
-          <button onClick={() => setCurrentScreenInKillit(desktopOrMobile)}>Back to stats</button>
+          <button onClick={() => setCurrentScreenInKillit(desktopOrMobile)}>Back to hamsters</button>
           <h2>{item}</h2>
           <p>{item}</p>
           <button onClick={() => setIfKilled(true)}>KILL IT!</button>
@@ -27,7 +29,8 @@ function Killit({item, setCurrentScreenInKillit, sendPoint}) {
     } else {
       return (
         <Ko deleteItem={item}
-        setCurrentScreenInKo={setCurrentScreenInKillit} />
+        setCurrentScreenInKo={setCurrentScreenInKillit}
+        sendPointKo = {desktopOrMobile} />
     );
     }
   }
