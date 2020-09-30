@@ -45,25 +45,6 @@ function Add() {
         <form  className="form" onSubmit={submit}>
           <div className="form-block">
             <label htmlFor="fname">First name</label>
-<<<<<<< HEAD
-            <input type="text" id="fname" name="fname"  />
-          </div>
-          <div className="form-block">                
-            <label htmlFor="lname">Favorite food</label>
-            <input type="text" id="lname" name="lname"  />
-          </div>
-          <div className="form-block">
-            <label htmlFor="lname">Age</label>
-            <input type="text" id="lname" name="lname"  />
-          </div>
-          <div className="form-block">
-            <label htmlFor="lname">Loves</label>
-            <input type="text" id="lname" name="lname"  />
-          </div>
-          <div className="form-block">
-            <label htmlFor="lname">Image</label>
-            <input type="text" id="lname" name="lname"  />
-=======
             <input type="text" name="userData[name]" value={userData.name} onChange={e => setUserdata({...userData, name: e.target.value})} />
           </div>
           <div className="form-block">                
@@ -81,7 +62,6 @@ function Add() {
           <div className="form-block">
             <label htmlFor="lname">Image</label>
             <input type="text"  name="userData[imgName]" value={userData.imgName} onChange={e => setUserdata({...userData, imgName: e.target.value})}/>
->>>>>>> arthur-dev
           </div>
           <input type="submit" className="add-hamster-button" name="ADD HAMSTER" value="ADD HAMSTER"/>
         </form>
