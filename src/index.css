@@ -28,3 +28,18 @@ code {
 .show-component {
   border: 1px solid red;
 }
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #246f6b;
+}
+nav a.active {
+  background-color: #38b2ac;
+  color: white;
+  border-radius: 2px;
+}
+
+.none {
+  display: none;
+}

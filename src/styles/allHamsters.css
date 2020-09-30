@@ -6,7 +6,7 @@
       0% { transform: translateY(-4px); }
       100% { transform: translateY(4px); }
   }
-  
+
   @media (max-height: 823px), (max-width: 411px) {
     .container {
       height: 100vh;
