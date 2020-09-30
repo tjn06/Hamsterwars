@@ -1,0 +1,364 @@
+.container-kill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/public/pics/mobil-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .go-to-next-battle {
+    align-self: center;
+    font-family: Trade Winds;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    text-shadow: 0px 0px 20px #FFFFFF;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px #FFFFFF;
+    outline: none;
+    border-style: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+    margin: 40px 0 60px 0;
+  }
+
+.kill {
+    text-align: center;
+    font-family: Trade Winds;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 93px;
+    background: -webkit-linear-gradient(-86deg, #c94d4b 56%, #FEDCA9 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffffff;
+    text-shadow: 0px 0px 70px #FEDCA9;
+    padding: 43px 0 23px 0;
+    -webkit-animation: action 0.5s infinite  alternate;
+    animation: action 0.7s infinite  alternate;
+    padding-right: 16px;
+  }
+
+  .container-kill-inside {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 520px;
+  }
+
+  .container-kill-name-ranking {
+    display: flex;
+    flex-direction: column;
+  }
+
+.hamster-kill-name {
+    font-family: Trade Winds;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 65px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 3px #FFFFFF;
+    transform: rotate(-0.57deg);
+    align-self: flex-start;
+    padding: 10px 0 0 0.5px;
+  }
+
+  .hamster-kill-world-ranking {
+    font-family: Padauk;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 33px;
+    text-shadow: 2px 2px 10px #ffffff;
+    padding: 30px 20px 10px 15px;
+    color: #ffffff;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: .7px;
+    opacity: .7;
+  }
+
+  .hamster-kill-world-ranking-number {
+    color: #FFFFFF;
+    text-shadow: 0px 0px 3px #FFFFFF;
+    transform: rotate(-0.57deg);
+    align-self: flex-start;
+    padding: 0;
+    margin: 0 0 10px 0;
+
+    font-family: Teko;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 118px;
+    line-height: 90px;
+    background: -webkit-linear-gradient(-86deg, #c94d4b 56%, #FEDCA9 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FAF0ED;
+    text-shadow: 0px 0px 70px #FEDCA9;
+    opacity: 0.75;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    transform: rotate(-0.57deg);
+  }
+
+.hamster-kill-pic {
+    margin-top: 0px;
+    height: 200px;
+    width: 290px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 25px 8px #F0B587;
+    border-radius: 3px;
+}
+
+.kill-details {
+    background: linear-gradient(180deg, rgba(195, 95, 94, 0.92) 0%, rgba(240, 181, 135, 0.92) 100%);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px 0px #F0B587;
+    border-radius: 3px 3px 0 0;
+    margin: 20px 0 0 0;
+    COLOR: #FFFFFF;
+    text-align: center;
+    padding: 2% 15% 2% 15%;
+    font-family: Padauk;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 33px;
+    color: #FFFFFF;
+    text-shadow: 5px 5px 10px #E4C47D;
+    width: 550px;
+}
+
+.kill-percentage-text {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.kill-percentage-number {
+    font-size: 60px;
+    margin-bottom: 10px;
+    padding: 20px 0 20px 0;
+}
+
+.kill-lost-battles {
+    border-bottom: 1px solid #ffffff;
+    padding: 0 0 10px 0;
+}
+
+.kill-favourite-food {
+    font-size: 14px;
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+}
+
+.kill-loves {
+    font-size: 14px;
+}
+
+.kill-age {
+    font-size: 14px;
+}
+
+.kill-it-button {
+    font-style: teko;
+    color: #ffffff;
+    background: #C66462;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 0px 0px 8px 8px;
+    width: 550px;
+    height: 40px;
+    outline: none;
+    z-index: 100;
+    cursor: pointer;
+    transition: .5s;
+}
+.kill-it-button:hover {
+    background: #AD3432;
+}
+
+@media (max-width: 650px) {
+.container-kill-inside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.container-kill-name-ranking {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .hamster-kill-name {
+    font-family: Trade Winds;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 3px #FFFFFF;
+    transform: rotate(-0.57deg);
+    padding: 5px;
+  }
+    .container-kill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(/public/pics/mobil-background.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .hamster-kill-world-ranking-number {
+        color: #FFFFFF;
+        text-shadow: 0px 0px 3px #FFFFFF;
+        margin: 0 0 10px 0;
+        text-align: center;
+        align-self: center;
+        font-family: Teko;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 60px;
+        background: -webkit-linear-gradient(-86deg, #c94d4b 56%, #FEDCA9 75%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #FAF0ED;
+        text-shadow: 0px 0px 70px #FEDCA9;
+        opacity: 0.75;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+      }
+    
+      .go-to-next-battle {
+        align-self: center;
+        width: 300px;
+        font-family: Trade Winds;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.4);
+        text-shadow: 0px 0px 20px #FFFFFF;
+        text-align: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0.75;
+        text-shadow: 0px 0px 2px #FFFFFF;
+        outline: none;
+        border-style: none;
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 3px;
+        padding: 10px 20px 10px 20px;
+        margin-top: 40px;
+      }
+    
+    .kill {
+        text-align: center;
+        font-family: Trade Winds;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 93px;
+        background: -webkit-linear-gradient(-86deg, #c94d4b 56%, #FEDCA9 75%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #ffffff;
+        text-shadow: 0px 0px 70px #FEDCA9;
+        padding-top: 13px;
+        -webkit-animation: action 0.5s infinite  alternate;
+        animation: action 0.7s infinite  alternate;
+        padding-right: 16px;
+      }
+        
+    .hamster-kill-pic {
+        margin-top: 0px;
+        height: 200px;
+        width: 290px;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 0px 25px 8px #F0B587;
+        border-radius: 3px;
+        align-self: center;
+    }
+    
+    .kill-details {
+        background: linear-gradient(180deg, rgba(195, 95, 94, 0.92) 0%, rgba(240, 181, 135, 0.92) 100%);
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px 0px #F0B587;
+        border-radius: 3px 3px 0 0;
+        margin: 20px 0 0 0;
+        COLOR: #FFFFFF;
+        text-align: center;
+        padding: 2% 5% 2% 5%;
+        font-family: Padauk;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 33px;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 10px #E4C47D;
+        width: 300px;
+    }
+    
+    .kill-percentage-text {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    .kill-percentage-number {
+        font-size: 60px;
+        margin-bottom: 10px;
+        padding: 20px 0 20px 0;
+    }
+    
+    .kill-lost-battles {
+        border-bottom: 1px solid #ffffff;
+        padding: 0 0 10px 0;
+    }
+    
+    .kill-favourite-food {
+        font-size: 14px;
+        border-top: 1px solid #ffffff;
+        padding-top: 10px;
+    }
+    
+    .kill-loves {
+        font-size: 14px;
+    }
+    
+    .kill-age {
+        font-size: 14px;
+    }
+
+    .kill-it-button {
+        font-style: teko;
+        color: #ffffff;
+        background: #C66462;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 0px 0px 8px 8px;
+        width: 300px;
+        height: 40px;
+        outline: none;
+        z-index: 100;
+        cursor: pointer;
+        transition: .5s;
+        margin-bottom: 80px
+    }
+}

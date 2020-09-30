@@ -11,7 +11,7 @@
     .container {
       height: 100vh;
       max-width: 411px;
-      background-image: url(./assets/mobil-background.svg);
+      background-image: url(/src/pics/mobil-background.svg);
       background-repeat: no-repeat;
       background-size: cover;
       display: flex;
@@ -41,7 +41,7 @@
       margin-top: 40px;
     }
   
-    .top-ten-weakest {
+    .top-ten-strongest {
       text-align: center;
       font-family: Trade Winds;
       font-style: normal;
@@ -107,6 +107,7 @@
       font-size: 30px;
       line-height: 46px;
       text-align: center;
-      color: #8D0404;
+      color: #68F46D;
     }
   }
+  

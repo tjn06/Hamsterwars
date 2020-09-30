@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
-// import { Link } from 'react-router-dom'
 
+import '../../styles/allHamsters.scoped.css'
 function Allhamsters({showHideFromStatsMobile, showHamsterinAllStats, sendPoint}) {
+
+
 
   const [showOrHideButton, setShowOrHideButton] = useState('none');
 

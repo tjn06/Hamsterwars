@@ -1,8 +1,10 @@
+
 body {
+
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Teko', sans-serif;
+  font-family: 'Trade Winds', cursive;
+  font-family: 'Padauk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,18 +30,6 @@ code {
 .show-component {
   border: 1px solid red;
 }
-
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  color: #246f6b;
-}
-nav a.active {
-  background-color: #38b2ac;
-  color: white;
-  border-radius: 2px;
-}
-
 .none {
   display: none;
 }

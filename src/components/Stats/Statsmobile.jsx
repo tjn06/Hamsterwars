@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/statsMobile.css';
+import '../../styles/statsMobile.scoped.css';
 // import { Link } from 'react-router-dom'
 
 function Statsmobile({showHideFromStatsMobile}) {

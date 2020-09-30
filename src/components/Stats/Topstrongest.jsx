@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import { Link } from 'react-router-dom'
+import '../../styles/topStrongest.scoped.css';
 
 function Topstrongest({showHideFromStatsMobile, sendPoint}) {
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-import '../../styles/stats.css';
+import '../../styles/stats.scoped.css';
 
 import Allhamsters from './Allhamsters';
 import Statsmobile from './Statsmobile';
@@ -11,7 +10,6 @@ import UseBreakpoints from './UseBreakpoint';
 
 function Stats() {
   const ALLSTATSDESKTOP = 'allStatsDesktop', STATSMOBILE = 'Statsmobile', KILLIT = 'Killit', KO = 'Ko';
-
 
   const [showHide, setshowHide] = useState(['show', 'hide', 'hide', 'hide']);
   const [currentScreen, setCurrentScreen] = useState(ALLSTATSDESKTOP);
@@ -29,6 +27,7 @@ function Stats() {
     }
   }, [point, currentScreen]);
 
+  
   function screenAndHamsterStats (killIt, hamsterDelete) {
     setCurrentScreen(killIt);
     setDeleteHamster(hamsterDelete)
@@ -77,7 +76,7 @@ function Stats() {
       /> )
         break;
     default:
-      content = ( allStatsDesktop )
+      content = (allStatsDesktop)
   }
 
   return (
