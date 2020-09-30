@@ -1,0 +1,32 @@
+ nav{
+    display: flex;
+    justify-content: space-around;
+    background: rgba(79, 36, 55, 0.85);
+    height: 65px;
+ }
+ 
+ nav a {
+    font-family: 'Padauk', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    
+    justify-self: center;
+    align-self: center;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:#C86963;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 8px rgba(240, 181, 135, 0.25);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  nav a.active {
+    background-color:#F0B587;
+    color: white;
+    border-radius: 2px;
+  }

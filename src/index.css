@@ -1,4 +1,6 @@
+
 body {
+
   margin: 0;
   font-family: 'Teko', sans-serif;
   font-family: 'Trade Winds', cursive;
@@ -27,4 +29,7 @@ code {
 
 .show-component {
   border: 1px solid red;
+}
+.none {
+  display: none;
 }
