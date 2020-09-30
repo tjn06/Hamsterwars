@@ -2,7 +2,7 @@ const express = require('express');
 const { ObjectID } = require('mongodb');
 const app = express();
 const MongoClient = require("mongodb",).MongoClient;
-const DB_URL = "mongodb+srv://Pontus:test1@hamstercluster.drmd0.mongodb.net/<dbname>?retryWrites=true&w=majority"
+const DB_URL = "mongodb+srv://Pontus:test123@hamstercluster.drmd0.mongodb.net/<dbname>?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 5000;
 const cors = require("cors");
 
@@ -29,6 +29,23 @@ app.get('/hamsters', (req, res) => {
         })
     })
 });
+app.get('/hamster/:id', (req, res) => {
+    MongoClient.connect(DB_URL, { useUnifiedTopology: true }, async function (err, client) {
+        const db = client.db("hamster_wars");
+        const collection = db.collection("hamsters");
+        collection.find({id: Number(req.params.id)}).sort({}).toArray(function (err, hamster) {
+            if (err) {
+                res.send(err)
+                client.close()
+                console.log("Connection CLOSED")
+            }
+            res.send(hamster)
+            client.close();
+            console.log("Connection CLOSED")
+
+        })
+    })
+});
 app.get('/hamsters/wins', (req, res) => {
     MongoClient.connect(DB_URL, { useUnifiedTopology: true }, function (err, client) {
         const db = client.db("hamster_wars");
@@ -46,11 +63,11 @@ app.get('/hamsters/wins', (req, res) => {
     })
 });
 app.get('/hamsters/defeats', (req, res) => {
-    MongoClient.connect(DB_URL, { useUnifiedTopology: true }, async function (err, client) {
+    MongoClient.connect(DB_URL, { useUnifiedTopology: true },  function (err, client) {
         const db = client.db("hamster_wars");
         const collection = db.collection("hamsters");
         try {
-            await collection.find({ defeats: { $gte: 1 } }).sort({ defeats: 1 }).toArray(function (err, defeats) {
+             collection.find({ defeats: { $gte: 1 } }).sort({ defeats: -1 }).toArray(function (err, defeats) {
                 res.send(defeats)
             })
         }
@@ -58,7 +75,7 @@ app.get('/hamsters/defeats', (req, res) => {
             console.log(error)
         }
         finally {
-            client.close()
+            
             console.log("Connection CLOSED")
         }
     })
@@ -106,7 +123,7 @@ app.put('/hamsters/updatewins/:id', (req, res) => {
         })
     })
 })
-app.put('/hamsters/updatewins/:id', (req, res) => {
+app.put('/hamsters/updatedefeats/:id', (req, res) => {
     MongoClient.connect(DB_URL, { useUnifiedTopology: true }, async function (err, client) {
         const db = client.db("hamster_wars");
         const collection = db.collection("hamsters");

@@ -233,7 +233,7 @@ img {
   }
   
   .container {
-      background-image: url(/src/pics/desktop-background.svg);
+      background-image: url(../pics/desktop-background.svg);
     box-shadow: inset 0px 0px 75px 50px #0D061B;
     background-repeat: no-repeat;
     background-size: cover;
@@ -586,7 +586,7 @@ img {
     }
     
     .container {
-        background-image: url(/src/pics/desktop-background.svg);
+        background-image: url(../pics/desktop-background.svg);
       box-shadow: inset 0px 0px 75px 50px #0D061B;
       background-repeat: no-repeat;
       background-size: cover;
@@ -657,7 +657,7 @@ img {
   }
   
   .container {
-      background-image: url(/src/pics/desktop-background.svg);
+      background-image: url(../pics/desktop-background.svg);
     box-shadow: inset 0px 0px 75px 50px #0D061B;
     background-repeat: no-repeat;
     background-size: cover;
@@ -716,7 +716,7 @@ img {
   }
   
   .container {
-      background-image: url(/src/pics/desktop-background.svg);
+      background-image: url(../pics/desktop-background.svg);
     box-shadow: inset 0px 0px 75px 50px #0D061B;
     background-repeat: no-repeat;
     background-size: cover;
@@ -724,6 +724,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
   }
 
   header {
@@ -775,7 +776,7 @@ img {
   }
   
   .container {
-      background-image: url(/src/pics/desktop-background.svg);
+      background-image: url(../pics/desktop-background.svg);
     box-shadow: inset 0px 0px 75px 50px #0D061B;
     background-repeat: no-repeat;
     background-size: cover;
