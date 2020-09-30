@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 // import { Link } from 'react-router-dom'
 
-function Topweakest() {
+function Topweakest({showHideFromStatsMobile, sendPoint}) {
+
+  const [showOrHideButton, setShowOrHideButton] = useState('none');
+
+  useEffect(() => {
+    if (sendPoint === 'xs') {
+      setShowOrHideButton('back-to-stats')
+      console.log(showOrHideButton)
+      console.log(sendPoint)
+    } else {
+      setShowOrHideButton('none')
+    }
+  }, [sendPoint]);
+
     return (
       <div className="container">
-        <button className="back-to-stats">BACK TO STATS</button>
+        <button className={`${showOrHideButton}`} onClick={() => showHideFromStatsMobile(['show' , 'hide', 'hide', 'hide'])} >BACK TO STATS</button>
         <h1 className="top-ten-weakest">TOP 10 WEAKEST</h1>
         <ul className="list">
           <li className="hamster-1"> <p className="name">1. Goran</p> &nbsp; <p className="percent">75%</p></li>

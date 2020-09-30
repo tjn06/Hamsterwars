@@ -4,6 +4,20 @@
     user-select: none;
     }
   
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+
+
+  .white {
+    color: white;
+  }
+  
   .back-to-battlemode {
     -webkit-animation: actionToBattle 0.5s infinite  alternate;
     animation: actionToBattle 0.7s infinite  alternate;

@@ -14,23 +14,23 @@ function Add() {
         <form action className="form">
           <div className="form-block">
             <label htmlFor="fname">First name</label>
-            <input type="text" id="fname" name="fname" defaultValue />
+            <input type="text" id="fname" name="fname"  />
           </div>
           <div className="form-block">                
             <label htmlFor="lname">Favorite food</label>
-            <input type="text" id="lname" name="lname" defaultValue />
+            <input type="text" id="lname" name="lname"  />
           </div>
           <div className="form-block">
             <label htmlFor="lname">Age</label>
-            <input type="text" id="lname" name="lname" defaultValue />
+            <input type="text" id="lname" name="lname"  />
           </div>
           <div className="form-block">
             <label htmlFor="lname">Loves</label>
-            <input type="text" id="lname" name="lname" defaultValue />
+            <input type="text" id="lname" name="lname"  />
           </div>
           <div className="form-block">
             <label htmlFor="lname">Image</label>
-            <input type="text" id="lname" name="lname" defaultValue />
+            <input type="text" id="lname" name="lname"  />
           </div>
           <button className="add-hamster-button">ADD HAMSTER</button>
         </form>

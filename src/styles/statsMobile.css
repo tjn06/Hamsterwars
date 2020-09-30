@@ -1,6 +1,6 @@
 @media (max-width: 411px) {
     .container {
-      display: block;
+     
       /* height: 100vh; */
       max-width: 411px;
       background-image: url(/public/pics/desktop-background.svg);

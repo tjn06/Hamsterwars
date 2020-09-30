@@ -1,21 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Header() {
     return (
       <nav style={{ margin: 10 }}>
-        <Link to="/" style={{ padding: 5 }}>
+        <NavLink to="/" activeClassName="active" end >
           Home
-        </Link>
-        <Link to="/add" style={{ padding: 5 }}>
+        </NavLink>
+        <NavLink to="/add" activeClassName="active"  >
           Add Hamster
-        </Link>
-        <Link to="/stats" style={{ padding: 5 }}>
+        </NavLink>
+        <NavLink to="/stats" activeClassName="active"  >
           Hamster stats
-        </Link>
-        <Link to="/battlemode" style={{ padding: 5 }}>
+        </NavLink>
+        <NavLink to="/battlemode" activeClassName="active"  >
           Battlemode
-        </Link>
+        </NavLink>
       </nav>
     );
   }
