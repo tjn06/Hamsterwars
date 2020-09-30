@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     user-select: none;
+    
+    
     }
-    html{
-      background-color: #0D061B;
-    }
+    
   
   .container {
     display: none;
@@ -26,6 +26,7 @@
     .container {
       max-width: 411px;
       background-image: url(../pics/mobil-background.svg);
+      box-shadow: inset 0px 0px 75px 50px #0D061B;
       background-repeat: no-repeat;
       background-size: cover;
       display: flex;
@@ -166,7 +167,7 @@
   
   .form {
     display: grid;
-    grid-template-columns: 350px 350px;
+    
     justify-content: center;
     align-items: center;
     background: linear-gradient(180deg, rgba(195, 95, 94, 0.92) 0%, rgba(240, 181, 135, 0.92) 100%);

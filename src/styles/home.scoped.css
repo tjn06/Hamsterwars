@@ -108,6 +108,7 @@ img {
 .title-1, .title-2, .title-3 {
   transition-duration: 1s;
   margin: 20px;
+  margin-bottom: 50px;
 }
 
 .title-1, .title-2, .title-3, h2 {
@@ -131,7 +132,7 @@ img {
   font-size: 1.7em;
   font-family: Teko;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 40px;
   text-align: center;
   background: #FFFFFF;
@@ -470,6 +471,8 @@ img {
     width: 320px;
     margin: 0;
     padding: 0;
+    height: 500px;
+    margin-top: 20px;
   }
 
   .title-1, .title-2, h2 {
