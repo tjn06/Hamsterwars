@@ -6,6 +6,7 @@ function Ko({deleteItem, setCurrentScreenInKo, sendPointKo}) {
   const point = UseBreakpoints();
   const [desktopOrMobile, setDesktopOrMobile] = useState(sendPointKo);
   const [buttonMessage, setButtonMessage] = useState('');
+
   useEffect(() => {
     if (point === 'xs') {
       setDesktopOrMobile('Statsmobile');
@@ -17,8 +18,7 @@ function Ko({deleteItem, setCurrentScreenInKo, sendPointKo}) {
   }, [point]);
 
     return (
-      
-        <div>
+      <div>
         <button onClick={() => setCurrentScreenInKo(desktopOrMobile)}>{buttonMessage}</button>
         <h2>Ko</h2>
         <p>{deleteItem} is deleted !</p>
