@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { Link } from 'react-router-dom';
 import Ko from "./Ko";
-import "../../../styles/killIt.css";
+import "../../../styles/killIt.scoped.css";
 
 function Killit({ item, setCurrentScreenInKillit, sendPoint }) {
 	let desktopOrMobile = "";
