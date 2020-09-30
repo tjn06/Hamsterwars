@@ -34,10 +34,14 @@ function Stats() {
   }
 
   const allStatsDesktop = (
-    <div className="">
-      <div><Allhamsters setCurrentScreenInAllHamsters={setCurrentScreen}
+    <div className="container">
+      <button class="back-to-battlemode"> GO TO BATTLEMODE </button>
+      <h1 class="stats">STATS</h1>
+      <div class="all-hamsters-container">
+        <Allhamsters setCurrentScreenInAllHamsters={setCurrentScreen}
       showHamsterinAllStats={screenAndHamsterStats}
       /></div>
+      
       <div><Topstrongest/></div>
       <div><Topsweakest/></div>
   </div>
@@ -85,9 +89,9 @@ function Stats() {
       {/* <h2 class="red">Stats</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adip.</p> */}
       
-      <span className="white">
+      
       <div className="">{content}</div>
-      </span>
+      
 
     </div>
   );
