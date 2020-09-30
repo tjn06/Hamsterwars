@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
-import '../../styles/stats.css';
+import '../../styles/stats.scoped.css';
 
 import Allhamsters from './Allhamsters';
 import Statsmobile from './Statsmobile';
@@ -23,6 +23,13 @@ function Stats() {
     }
   }, [point]);
 
+<<<<<<< HEAD
+=======
+  function screenAndHamsterAllStats(screenAllhamsters, hamsterDelete) {
+    setCurrentScreen(screenAllhamsters);
+    setDeleteHamster(hamsterDelete)
+  }
+>>>>>>> arthur-dev
 
   const [showHide, setshowHide] = useState(['show', 'hide', 'hide', 'hide']);
   const [currentScreen, setCurrentScreen] = useState(ALLSTATSDESKTOP);
@@ -35,12 +42,21 @@ function Stats() {
 
   const allStatsDesktop = (
     <div className="">
+<<<<<<< HEAD
       <div><Allhamsters setCurrentScreenInAllHamsters={setCurrentScreen}
       showHamsterinAllStats={screenAndHamsterStats}
       /></div>
       <div><Topstrongest/></div>
       <div><Topsweakest/></div>
   </div>
+=======
+      <Statsmobile />
+      <div className={`${cssShowHide}`}><Allhamsters screenAndHamster={screenAndHamsterAllStats}
+        setDeleteHamsterFromAllHamsters={setDeleteHamster} /></div>
+      <div><Topstrongest /></div>
+      <div><Topsweakest /></div>
+    </div>
+>>>>>>> arthur-dev
   )
 
   const statsMobileSize = (
@@ -64,6 +80,7 @@ function Stats() {
   let content = null;
   switch (currentScreen) {
     case ALLSTATSDESKTOP:
+<<<<<<< HEAD
       content = ( allStatsDesktop )
         break;
     case (STATSMOBILE):
@@ -75,8 +92,16 @@ function Stats() {
       sendPoint={point}
       /> )
         break;
+=======
+      content = (allStatsDesktop)
+      break;
+    case KILLIT:
+      content = (<Killit item={deleteHamster}
+        setCurrentScreenInKillit={setCurrentScreen} />)
+      break;
+>>>>>>> arthur-dev
     default:
-      content = ( allStatsDesktop )
+      content = (allStatsDesktop)
   }
 
   return (

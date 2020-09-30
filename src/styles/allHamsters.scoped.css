@@ -11,7 +11,7 @@
     .container {
       height: 100vh;
       max-width: 411px;
-      background-image: url(./assets/mobil-background.svg);
+      background-image: url(/src/pics/mobil-background.svg);
       background-repeat: no-repeat;
       background-size: cover;
       display: flex;

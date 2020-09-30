@@ -1,5 +1,5 @@
 import React from 'react';
-/* import './App.css'; */
+//import './App.css';
 
 import Header from './components/Header';
 import Home from './components/Home';
@@ -10,13 +10,13 @@ import Winner from './components/Battlemode/Winner';
 import Killit from './components/Stats/Delete/Killit';
 
 
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
   return (
     <Router>
-    <Header />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/add" element={<Add />} />

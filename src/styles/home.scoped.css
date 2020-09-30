@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -18,17 +19,17 @@ body {
 }
 
 .add-hamster-menu, .hamster-stats-menu, .battlemode-menu, .menu-text {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Padauk', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
-  font-weight: bolder;
+  font-size: 35px;
+  
   justify-self: center;
   align-self: center;
   background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color:#C86963;
   text-align: center;
   color: #FFFFFF;
@@ -232,7 +233,7 @@ img {
   }
   
   .container {
-      background-image: url(/public/pics/desktop-background.svg);
+      background-image: url(/src/pics/desktop-background.svg);
     box-shadow: inset 0px 0px 75px 50px #0D061B;
     background-repeat: no-repeat;
     background-size: cover;
@@ -565,14 +566,34 @@ img {
       font-family: roboto;
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
-      width: 230px;
-      height: 40px;
-      background: #DF9898;
-      border: 2px solid #FFFFFF;
-      box-sizing: border-box;
-      border-radius: 3px;
-      color: #ffffff;
+      font-size: 38px;
+      line-height: 40px;
+      background: -webkit-linear-gradient(-86deg, #c94d4b 40%, #FEDCA9 65%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #ffffff;
+      text-shadow: 0px 0px 70px #FEDCA9;
+      margin-top: 50px;
+      margin-bottom: 40px;
+      transform: rotate(-0.57deg);
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    html {
+      background-color: #0D061B;
+    }
+    
+    .container {
+        background-image: url(/src/pics/desktop-background.svg);
+      box-shadow: inset 0px 0px 75px 50px #0D061B;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   
     input:focus {
@@ -636,7 +657,7 @@ img {
   }
   
   .container {
-      background-image: url(/public/pics/desktop-background.svg);
+      background-image: url(/src/pics/desktop-background.svg);
     box-shadow: inset 0px 0px 75px 50px #0D061B;
     background-repeat: no-repeat;
     background-size: cover;
@@ -695,7 +716,7 @@ img {
   }
   
   .container {
-      background-image: url(/public/pics/desktop-background.svg);
+      background-image: url(/src/pics/desktop-background.svg);
     box-shadow: inset 0px 0px 75px 50px #0D061B;
     background-repeat: no-repeat;
     background-size: cover;
@@ -754,7 +775,7 @@ img {
   }
   
   .container {
-      background-image: url(/public/pics/desktop-background.svg);
+      background-image: url(/src/pics/desktop-background.svg);
     box-shadow: inset 0px 0px 75px 50px #0D061B;
     background-repeat: no-repeat;
     background-size: cover;

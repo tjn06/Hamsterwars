@@ -4,11 +4,12 @@ const app = express();
 const MongoClient = require("mongodb",).MongoClient;
 const DB_URL = "mongodb+srv://Pontus:test1@hamstercluster.drmd0.mongodb.net/<dbname>?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 5000;
+const cors = require("cors");
 
 
 // MIDDLEWARE
 app.use(express.json());
-
+app.use(cors())
 // ROUTES
 
 app.get('/hamsters', (req, res) => {
@@ -121,6 +122,7 @@ app.post('/addhamster', (req, res) => {
         const db = client.db("hamster_wars");
         const collection = db.collection("hamsters");
         let { name, age, favFood, loves, imgName } = req.body
+        console.log(req.body)
         collection.insertOne({
             id: baseId + 1,
             name,
