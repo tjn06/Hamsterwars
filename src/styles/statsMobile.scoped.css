@@ -7,7 +7,9 @@
       background-image: url(../pics/desktop-background.svg);
       background-repeat: no-repeat;
       background-size: cover;
+      background-color: #0D061B;
     }
+
   
     .stats {
       text-align: center;

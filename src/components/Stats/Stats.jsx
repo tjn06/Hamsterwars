@@ -6,6 +6,7 @@ import Statsmobile from "./Statsmobile";
 import Topstrongest from "./Topstrongest";
 import Topsweakest from "./Topweakest";
 import Killit from "./Delete/Killit";
+import Statscomp from "./Statscomp";
 import UseBreakpoints from "./UseBreakpoint";
 
 function Stats() {
@@ -83,12 +84,16 @@ function Stats() {
 				/>
 			</div>
 		</div>
-	);
+  );
+  
+  
 
 	let content = null;
 	switch (currentScreen) {
 		case ALLSTATSDESKTOP:
-			content = allStatsDesktop;
+			content = (
+				<Statscomp/>
+			);
 			break;
 		case STATSMOBILE:
 			content = statsMobileSize;
