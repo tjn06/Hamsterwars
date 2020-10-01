@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
-
 import '../../styles/allHamsters.scoped.css'
+
+
 function Allhamsters({showHideFromStatsMobile, showHamsterinAllStats, sendPoint}) {
-
-
-
   const [showOrHideButton, setShowOrHideButton] = useState('none');
 
   useEffect(() => {
