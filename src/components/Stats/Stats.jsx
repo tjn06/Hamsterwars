@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/stats.scoped.css";
+import {Link} from 'react-router-dom'
 
 import Allhamsters from "./Allhamsters";
 import Statsmobile from "./Statsmobile";
@@ -34,11 +35,12 @@ function Stats() {
 		setCurrentScreen(killIt);
 		setDeleteHamster(hamsterDelete);
 	}
+	
 
 	const allStatsDesktop = (
 		<div className="black">
 			<div className="container">
-				<button className="back-to-battlemode"> GO TO BATTLEMODE </button>
+      <Link to="/battlemode" className="back-to-battlemode" ><button className="back-to-battlemode">&lt; GO TO BATTLEMODE &gt;</button></Link>
 				<h1 className="stats">STATS</h1>
 				<div className="all-hamsters-container">
 					<Allhamsters
@@ -68,7 +70,7 @@ function Stats() {
 					showHamsterinAllStats={screenAndHamsterStats}
 					// setCurrentScreenInAllHamsters={setCurrentScreen}
 					sendPoint={point}
-				/>{" "}
+				/>
 			</div>
 			<div className={`${showHide[2]}`}>
 				<Topstrongest

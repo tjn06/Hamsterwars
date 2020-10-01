@@ -1,10 +1,13 @@
 
 @media (max-width: 411px) {
+  body {
+    background-color: #303030;
+  }
     .container {
      
       /* height: 100vh; */
       max-width: 411px;
-      background-image: url(../pics/desktop-background.svg);
+      background-color: #303030;
       background-repeat: no-repeat;
       background-size: cover;
     }

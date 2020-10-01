@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/home.scoped.css"
-
+import {Link} from 'react-router-dom'
 function Home() {
   return (
     <div className="home-container">
@@ -18,7 +18,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <button className="back-to-battlemode">&lt; GO TO BATTLEMODE &gt;</button>
+      <Link to="/battlemode" className="back-to-battlemode" ><button className="back-to-battlemode">&lt; GO TO BATTLEMODE &gt;</button></Link>
     </div>
   );
 }

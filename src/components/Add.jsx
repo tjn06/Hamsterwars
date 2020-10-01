@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import '../styles/addHamster.scoped.css';
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Add() {
   const [userData, setUserdata] = useState({})
@@ -65,7 +65,7 @@ function Add() {
           </div>
           <input type="submit" className="add-hamster-button" name="ADD HAMSTER" value="ADD HAMSTER"/>
         </form>
-        <button className="back-to-battlemode">&lt; GO TO BATTLEMODE &gt;</button>
+        <Link to="/battlemode" className="back-to-battlemode" ><button className="back-to-battlemode">&lt; GO TO BATTLEMODE &gt;</button></Link>
       </div>
     );
   }

@@ -30,6 +30,13 @@ useEffect(() => {
 
     }, [])
 
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
     function handleClick(hamster) {
       setWinner(hamster)
       if(winner) {
@@ -79,7 +86,10 @@ fetch(`http://localhost:5000/hamsters/updatewins/${hamsterId}`, {
         <img className="hamster-pic-2" src={userData ? require(`../../hamsters/${hamster2.imgName}`): "../../hamsters/hamster-11.jpg"}  alt=""/>
     <h2 className="hamster-fight-2-name">{hamster2.name}</h2>
       </div>
-    <button onClick={next} className="go-to-next-battle">GO TO NEXT BATTLE</button>
+    <button onClick={() => {
+          next();
+          scrollToTop();
+        }} className="go-to-next-battle">GO TO NEXT BATTLE</button>
       
       { winner ? <Winner value={winner}/> : null }
   </div>

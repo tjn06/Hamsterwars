@@ -112,6 +112,24 @@ cursor: pointer
   }
 
   .go-to-next-battle {
+    align-self: center;
+    font-family: Trade Winds;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    text-shadow: 0px 0px 20px #FFFFFF;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px #FFFFFF;
+    outline: none;
+    border-style: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+    margin-top: 40px;
     cursor: pointer;
   }
 
