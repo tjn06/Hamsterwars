@@ -2,28 +2,28 @@ import React, { useState, useEffect } from "react";
 
 import Ko from './Ko';
 import UseBreakpoints from '../UseBreakpoint';
-import "../../../styles/killIt.css";
+import "../../../styles/killIt.scoped.css";
 
 
-function Killit({item, setCurrentScreenInKillit, sendPoint}) {
-  const point = UseBreakpoints();
+function Killit({ item, setCurrentScreenInKillit, sendPoint }) {
+	const point = UseBreakpoints();
 
-  const [desktopOrMobile, setDesktopOrMobile] = useState();
+	const [desktopOrMobile, setDesktopOrMobile] = useState();
 
-  useEffect(() => {
-    if (point === 'xs') {
-      setDesktopOrMobile('Statsmobile');
-    } else {
-      setDesktopOrMobile('allStatsDesktop');
-    }
-  }, [point]);
+	useEffect(() => {
+		if (point === 'xs') {
+			setDesktopOrMobile('Statsmobile');
+		} else {
+			setDesktopOrMobile('allStatsDesktop');
+		}
+	}, [point]);
 
-  const [ifKilled, setIfKilled] = useState(false);
-    if (!ifKilled) {
-      return (
-        <div>
-			<div className="container-kill">
-			  		<button onClick={() => setCurrentScreenInKillit(desktopOrMobile)} className="go-to-next-battle">Back to hamsters</button>
+	const [ifKilled, setIfKilled] = useState(false);
+	if (!ifKilled) {
+		return (
+			<div>
+				<div className="container-kill">
+					<button onClick={() => setCurrentScreenInKillit(desktopOrMobile)} className="go-to-next-battle">Back to hamsters</button>
 					<div className="container-kill-inside">
 						<div className="container-kill-name-ranking">
 							<h3 className="hamster-kill-name">{item}</h3>
@@ -57,17 +57,17 @@ function Killit({item, setCurrentScreenInKillit, sendPoint}) {
 					</div>
 					<button onClick={() => setIfKilled(true)} className="kill-it-button">KILL IT!</button>
 				</div>
-			
-      	</div>
-      );
-    } else {
-      return (
-        <Ko deleteItem={item}
-        setCurrentScreenInKo={setCurrentScreenInKillit}
-        sendPointKo = {desktopOrMobile} />
-    );
-    }
-  }
+
+			</div>
+		);
+	} else {
+		return (
+			<Ko deleteItem={item}
+				setCurrentScreenInKo={setCurrentScreenInKillit}
+				sendPointKo={desktopOrMobile} />
+		);
+	}
+}
 
 
 export default Killit;
