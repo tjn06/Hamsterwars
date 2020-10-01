@@ -1,9 +1,10 @@
+
 @media (max-width: 411px) {
     .container {
      
       /* height: 100vh; */
       max-width: 411px;
-      background-image: url(/public/pics/desktop-background.svg);
+      background-image: url(../pics/desktop-background.svg);
       background-repeat: no-repeat;
       background-size: cover;
     }

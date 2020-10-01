@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react'
-
 import '../../styles/allHamsters.scoped.css'
+
+
 function Allhamsters({showHideFromStatsMobile, showHamsterinAllStats, sendPoint}) {
-
-
-
   const [showOrHideButton, setShowOrHideButton] = useState('none');
 
   useEffect(() => {
     if (sendPoint === 'xs') {
       setShowOrHideButton('back-to-stats')
-      console.log(showOrHideButton)
-      console.log(sendPoint)
     } else {
       setShowOrHideButton('none')
     }
