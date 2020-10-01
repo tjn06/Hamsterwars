@@ -3,7 +3,7 @@ import "../styles/home.scoped.css"
 
 function Home() {
   return (
-    <div className="home container">
+    <div className="home-container">
       <div className="main-container">
         <div className="logo"><img src={require("../pics/logo.svg")} alt="" /></div>
         <div className="titles">

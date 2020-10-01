@@ -30,10 +30,12 @@ function Stats() {
 		}
 	}, [point, currentScreen]);
 
+
 	function screenAndHamsterStats(killIt, hamsterDelete) {
 		setCurrentScreen(killIt);
 		setDeleteHamster(hamsterDelete);
 	}
+
 
 	const allStatsDesktop = (
     <div className="black">
@@ -53,6 +55,58 @@ function Stats() {
 				</div>
         </div>
 
+
+  function screenAndHamsterStats (killIt, hamsterDelete) {
+    setCurrentScreen(killIt);
+    setDeleteHamster(hamsterDelete)
+  }
+
+  const allStatsDesktop = (
+    <div className="">
+      <div><Allhamsters setCurrentScreenInAllHamsters={setCurrentScreen}
+      showHamsterinAllStats={screenAndHamsterStats}
+      /></div>
+      <div><Topstrongest/></div>
+      <div><Topsweakest/></div>
+  </div>
+  )
+
+  const statsMobileSize = (
+    <div>
+      <div className={`${showHide[0]}`}><Statsmobile showHideFromStatsMobile={setshowHide} /></div>
+      <div className={`${showHide[1]}`}><Allhamsters showHideFromStatsMobile={setshowHide}
+      showHamsterinAllStats={screenAndHamsterStats}
+        // setCurrentScreenInAllHamsters={setCurrentScreen}
+        sendPoint={point}
+        /> </div>
+      <div className={`${showHide[2]}`}><Topstrongest showHideFromStatsMobile={setshowHide}
+        sendPoint={point}
+      /></div>
+      <div className={`${showHide[3]}`}><Topsweakest showHideFromStatsMobile={setshowHide}
+        sendPoint={point}
+      /></div>
+  </div>
+  )
+
+  
+  let content = null;
+  switch (currentScreen) {
+    case ALLSTATSDESKTOP:
+      content = ( allStatsDesktop )
+        break;
+    case (STATSMOBILE):
+      content = ( statsMobileSize )
+    break;
+    case KILLIT:
+      content = ( <Killit item={deleteHamster}
+      setCurrentScreenInKillit={setCurrentScreen}
+      sendPoint={point}
+      /> )
+        break;
+    default:
+      content = (allStatsDesktop)
+  }
+=======
 		</div>
     </div>
 	);
@@ -84,6 +138,7 @@ function Stats() {
 			</div>
 		</div>
 	);
+
 
 	let content = null;
 	switch (currentScreen) {

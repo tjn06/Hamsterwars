@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+
 import Ko from './Ko';
 import UseBreakpoints from '../UseBreakpoint';
 import "../../../styles/killIt.css";
+
 
 function Killit({item, setCurrentScreenInKillit, sendPoint}) {
   const point = UseBreakpoints();

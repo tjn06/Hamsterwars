@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/battlemode.css';
+import '../../styles/battlemode.scoped.css';
 // import { Link } from 'react-router-dom'
 
 function Battlemode() {

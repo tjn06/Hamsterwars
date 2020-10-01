@@ -4,6 +4,15 @@ body{
   sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
+margin:0;
+padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 100vh;
 }
 
 .App {
@@ -31,6 +40,7 @@ body{
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;
