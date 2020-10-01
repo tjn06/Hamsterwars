@@ -1,121 +1,116 @@
-import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-import '../../styles/stats.scoped.css';
+import React, { useState, useEffect } from "react";
+import "../../styles/stats.scoped.css";
 
-import Allhamsters from './Allhamsters';
-import Statsmobile from './Statsmobile';
-import Topstrongest from './Topstrongest';
-import Topsweakest from './Topweakest';
-import Killit from './Delete/Killit';
-import UseBreakpoints from './UseBreakpoint';
+import Allhamsters from "./Allhamsters";
+import Statsmobile from "./Statsmobile";
+import Topstrongest from "./Topstrongest";
+import Topsweakest from "./Topweakest";
+import Killit from "./Delete/Killit";
+import UseBreakpoints from "./UseBreakpoint";
 
 function Stats() {
+	const ALLSTATSDESKTOP = "allStatsDesktop",
+		STATSMOBILE = "Statsmobile",
+		KILLIT = "Killit",
+		KO = "Ko";
 
-  const point = UseBreakpoints();
+	const [showHide, setshowHide] = useState(["show", "hide", "hide", "hide"]);
+	const [currentScreen, setCurrentScreen] = useState(ALLSTATSDESKTOP);
+	const [deleteHamster, setDeleteHamster] = useState();
 
-  const ALLSTATSDESKTOP = 'allStatsDesktop', STATSMOBILE = 'Statsmobile', KILLIT = 'Killit', KO = 'Ko';
+	const point = UseBreakpoints();
 
-  useEffect(() => {
-    if (point === 'xs') {
-      setCurrentScreen(STATSMOBILE);
-    } else {
-      setCurrentScreen(ALLSTATSDESKTOP);
-    }
-  }, [point]);
+	useEffect(() => {
+		if (point === "xs" && currentScreen !== KILLIT) {
+			setCurrentScreen(STATSMOBILE);
+		} else if (point === "lg" && currentScreen !== KILLIT) {
+			setCurrentScreen(ALLSTATSDESKTOP);
+		} else {
+			setCurrentScreen(KILLIT);
+		}
+	}, [point, currentScreen]);
 
-<<<<<<< HEAD
-=======
-  function screenAndHamsterAllStats(screenAllhamsters, hamsterDelete) {
-    setCurrentScreen(screenAllhamsters);
-    setDeleteHamster(hamsterDelete)
-  }
->>>>>>> arthur-dev
+	function screenAndHamsterStats(killIt, hamsterDelete) {
+		setCurrentScreen(killIt);
+		setDeleteHamster(hamsterDelete);
+	}
 
-  const [showHide, setshowHide] = useState(['show', 'hide', 'hide', 'hide']);
-  const [currentScreen, setCurrentScreen] = useState(ALLSTATSDESKTOP);
-  const [deleteHamster, setDeleteHamster] = useState();
+	const allStatsDesktop = (
+    <div className="black">
+		<div className="container">
+			<button className="back-to-battlemode"> GO TO BATTLEMODE </button>
+			<h1 className="stats">STATS</h1>
+			<div className="all-hamsters-container">
+				<Allhamsters
+					setCurrentScreenInAllHamsters={setCurrentScreen}
+					showHamsterinAllStats={screenAndHamsterStats}
+				/>
+				<div>
+					<Topstrongest />
+				</div>
+				<div>
+					<Topsweakest />
+				</div>
+        </div>
 
-  function screenAndHamsterStats (killIt, hamsterDelete) {
-    setCurrentScreen(killIt);
-    setDeleteHamster(hamsterDelete)
-  }
-
-  const allStatsDesktop = (
-    <div className="">
-<<<<<<< HEAD
-      <div><Allhamsters setCurrentScreenInAllHamsters={setCurrentScreen}
-      showHamsterinAllStats={screenAndHamsterStats}
-      /></div>
-      <div><Topstrongest/></div>
-      <div><Topsweakest/></div>
-  </div>
-=======
-      <Statsmobile />
-      <div className={`${cssShowHide}`}><Allhamsters screenAndHamster={screenAndHamsterAllStats}
-        setDeleteHamsterFromAllHamsters={setDeleteHamster} /></div>
-      <div><Topstrongest /></div>
-      <div><Topsweakest /></div>
+		</div>
     </div>
->>>>>>> arthur-dev
-  )
+	);
 
-  const statsMobileSize = (
-    <div>
-      <div className={`${showHide[0]}`}><Statsmobile showHideFromStatsMobile={setshowHide} /></div>
-      <div className={`${showHide[1]}`}><Allhamsters showHideFromStatsMobile={setshowHide}
-      showHamsterinAllStats={screenAndHamsterStats}
-        // setCurrentScreenInAllHamsters={setCurrentScreen}
-        sendPoint={point}
-        /> </div>
-      <div className={`${showHide[2]}`}><Topstrongest showHideFromStatsMobile={setshowHide}
-        sendPoint={point}
-      /></div>
-      <div className={`${showHide[3]}`}><Topsweakest showHideFromStatsMobile={setshowHide}
-        sendPoint={point}
-      /></div>
-  </div>
-  )
+	const statsMobileSize = (
+		<div>
+			<div className={`${showHide[0]}`}>
+				<Statsmobile showHideFromStatsMobile={setshowHide} />
+			</div>
+			<div className={`${showHide[1]}`}>
+				<Allhamsters
+					showHideFromStatsMobile={setshowHide}
+					showHamsterinAllStats={screenAndHamsterStats}
+					// setCurrentScreenInAllHamsters={setCurrentScreen}
+					sendPoint={point}
+				/>{" "}
+			</div>
+			<div className={`${showHide[2]}`}>
+				<Topstrongest
+					showHideFromStatsMobile={setshowHide}
+					sendPoint={point}
+				/>
+			</div>
+			<div className={`${showHide[3]}`}>
+				<Topsweakest
+					showHideFromStatsMobile={setshowHide}
+					sendPoint={point}
+				/>
+			</div>
+		</div>
+	);
 
-  
-  let content = null;
-  switch (currentScreen) {
-    case ALLSTATSDESKTOP:
-<<<<<<< HEAD
-      content = ( allStatsDesktop )
-        break;
-    case (STATSMOBILE):
-      content = ( statsMobileSize )
-    break;
-    case KILLIT:
-      content = ( <Killit item={deleteHamster}
-      setCurrentScreenInKillit={setCurrentScreen}
-      sendPoint={point}
-      /> )
-        break;
-=======
-      content = (allStatsDesktop)
-      break;
-    case KILLIT:
-      content = (<Killit item={deleteHamster}
-        setCurrentScreenInKillit={setCurrentScreen} />)
-      break;
->>>>>>> arthur-dev
-    default:
-      content = (allStatsDesktop)
-  }
+	let content = null;
+	switch (currentScreen) {
+		case ALLSTATSDESKTOP:
+			content = allStatsDesktop;
+			break;
+		case STATSMOBILE:
+			content = statsMobileSize;
+			break;
+		case KILLIT:
+			content = (
+				<Killit
+					item={deleteHamster}
+					setCurrentScreenInKillit={setCurrentScreen}
+					sendPoint={point}
+				/>
+			);
+			break;
+		default:
+			content = allStatsDesktop;
+	}
 
-  return (
-
-    <div style={{ padding: 20 }}>
-      {/* <h2 class="red">Stats</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adip.</p> */}
-      
-      <span className="white">
-      <div className="">{content}</div>
-      </span>
-
-    </div>
-  );
+	return (
+		<div>
+			<div className="">{content}</div>
+		</div>
+	);
 }
 
 export default Stats;

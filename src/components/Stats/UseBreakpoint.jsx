@@ -5,7 +5,7 @@ const getDeviceConfig = (width) => {
   if(width < 412) {
     return 'xs';
 
-  } else if(width >= 1024) {
+  } else if(width >= 412) {
     return 'lg';
   }
 };
