@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import '../../styles/topWeakest.scoped.css';
+import "../../styles/topWeakest.scoped.css";
+// import "../../styles/stats.scoped.css";
 
 function Topweakest({showHideFromStatsMobile, sendPoint}) {
 
@@ -8,8 +9,6 @@ function Topweakest({showHideFromStatsMobile, sendPoint}) {
   useEffect(() => {
     if (sendPoint === 'xs') {
       setShowOrHideButton('back-to-stats')
-      console.log(showOrHideButton)
-      console.log(sendPoint)
     } else {
       setShowOrHideButton('none')
     }

@@ -19,6 +19,7 @@ cursor: pointer
   }
 
   .stats {
+
     text-align: center;
     font-family: Trade Winds;
     font-style: normal;
@@ -109,9 +110,11 @@ cursor: pointer
     box-shadow: 0px 0px 25px 8px #F0B587;
     border-radius: 3px;
   }
+
   .go-to-next-battle {
     cursor: pointer;
   }
+
 
   @-webkit-keyframes action {
     0% { transform: translateY(-4px); }

@@ -1,7 +1,9 @@
+
 import React, {useState,useEffect} from 'react'
 import '../../styles/battlemode.scoped.css';
 import "../../index.css"
 import Winner from "../../components/Battlemode/Winner"
+
 function Battlemode() {
   const [userData, setUserdata] = useState(false)
   const [winner, setWinner] = useState(false)

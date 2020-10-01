@@ -4,11 +4,31 @@
   padding: 0;
   user-select: none;
   }
-
+  html{
+    background-color: #0D061B;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+  }
+  
 body {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  height: 100vh;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0D061B;
+  background-image: url(../pics/desktop-background.svg);
+  box-shadow: inset 0px 0px 75px 50px #0D061B;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 8%;
 }
 
 .nav-items {
@@ -75,6 +95,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-top: 0px;
+
 }
 
 .titles {
@@ -87,13 +108,14 @@ img {
 .title-1, .title-2, .title-3 {
   transition-duration: 1s;
   margin: 20px;
+  margin-bottom: 50px;
 }
 
 .title-1, .title-2, .title-3, h2 {
   font-family: Teko;
   font-style: normal;
   font-weight: normal;
-  font-size: 60px;
+  font-size: 2.3em;
   line-height: 56px;
   text-align: center;
   color: #F0B587;
@@ -107,10 +129,10 @@ img {
 }
 
 .title-1, .title-2, .title-3, h3 {
+  font-size: 1.7em;
   font-family: Teko;
   font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
+  font-weight: normal;
   line-height: 40px;
   text-align: center;
   background: #FFFFFF;
@@ -134,13 +156,10 @@ img {
 
   .title-1, .title-2, .title-3, h2 {
     max-width: 300px;
-    font-size: 50px;
-    line-height: 46px;
   }
   
   .title-1, .title-2, .title-3, h3 {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 1.7em;
   }
 
   .title-1, .title-2, .title-3 {
@@ -162,7 +181,7 @@ img {
   }
 }
 
-@media screen and (min-width: 550px) and (max-width: 900px) {
+@media screen and (min-width: 412px) and (max-width: 900px) {
   .main-container {
     display: flex;
     flex-direction: column;
@@ -177,15 +196,14 @@ img {
   }
 
   .title-1, .title-2, .title-3, h2 {
-    font-size: 50px;
+    font-size: 2.3em;
     line-height: 46px;
     text-align: left;
   }
   
   .title-1, .title-2, .title-3, h3 {
     max-width: 350px;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 1.7em;
     text-align: left;
   }
 
@@ -195,7 +213,7 @@ img {
   }
 
   .title-2 {
-    transform: translate(-50px, 0);
+    transform: translate(-50px, -20px);
     width: 300px;
     align-self: flex-start;
     margin-right: 500px;
@@ -220,6 +238,23 @@ img {
 }
 
 @media screen and (max-width: 411px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #0D061B;
+    background-image: url(../pics/desktop-background.svg);
+    box-shadow: inset 0px 0px 75px 50px #0D061B;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 8%;
+  }
+
+  .logo {
+    display: none;
+  }
+
   .main-container {
     display: flex;
     flex-direction: column;
@@ -233,7 +268,9 @@ img {
   }
   
   .container {
+
       background-image: url(../pics/desktop-background.svg);
+
     box-shadow: inset 0px 0px 75px 50px #0D061B;
     background-repeat: no-repeat;
     background-size: cover;
@@ -264,6 +301,7 @@ img {
 
   body{
     overflow: hidden;
+    height: 100vh;
   }
 
   .nav {
@@ -435,6 +473,8 @@ img {
     width: 320px;
     margin: 0;
     padding: 0;
+    height: 500px;
+    margin-top: 20px;
   }
 
   .title-1, .title-2, h2 {
@@ -512,7 +552,7 @@ img {
   }
 }
 
-@media screen and (min-width: 412px) and (max-width: 899px) {
+@media screen and (min-width: 600px) and (max-width: 899px) {
     .back-to-battlemode {
       font-family: Trade Winds;
       font-style: normal;
@@ -594,6 +634,7 @@ img {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      background-color: #0D061B;
     }
   
     input:focus {
@@ -665,6 +706,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #0D061B;
   }
 
   header {
@@ -708,6 +750,19 @@ img {
     margin-bottom: 40px;
     transform: rotate(-0.57deg);
   }
+
+  .title-1 {
+    align-self: center;
+    transform: translate(-100px, 0);
+  }
+  .title-2 {
+    align-self: center;
+    transform: translate(0, 0);
+  }
+  .title-3 {
+    align-self: center;
+    transform: translate(-90px, 20px);
+  }
 }
 
 @media screen and (min-width: 651px) and (max-width: 899px) {
@@ -724,7 +779,9 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
+    background-color: #0D061B;
+
   }
 
   header {
@@ -784,6 +841,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #0D061B;
   }
 
   header {

@@ -1,6 +1,8 @@
+
 import React, {useEffect,useState} from 'react'
 import '../../styles/winner.css';
 function Winner({value}) {
+
 
     return (
       <div className="container-winner">
