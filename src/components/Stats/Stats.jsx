@@ -10,27 +10,24 @@ import Killit from './Delete/Killit';
 import UseBreakpoints from './UseBreakpoint';
 
 function Stats() {
-
-  const point = UseBreakpoints();
-
   const ALLSTATSDESKTOP = 'allStatsDesktop', STATSMOBILE = 'Statsmobile', KILLIT = 'Killit', KO = 'Ko';
 
-  useEffect(() => {
-    if (point === 'xs') {
-      setCurrentScreen(STATSMOBILE);
-    } else {
-      setCurrentScreen(ALLSTATSDESKTOP);
-    }
-  }, [point]);
-
-  function screenAndHamsterAllStats(screenAllhamsters, hamsterDelete) {
-    setCurrentScreen(screenAllhamsters);
-    setDeleteHamster(hamsterDelete)
-  }
 
   const [showHide, setshowHide] = useState(['show', 'hide', 'hide', 'hide']);
   const [currentScreen, setCurrentScreen] = useState(ALLSTATSDESKTOP);
   const [deleteHamster, setDeleteHamster] = useState();
+
+  const point = UseBreakpoints();
+
+  useEffect(() => {
+    if ((point === 'xs') && (currentScreen !== KILLIT)) {
+      setCurrentScreen(STATSMOBILE);
+    } else if ((point === 'lg') && (currentScreen !== KILLIT)) {
+      setCurrentScreen(ALLSTATSDESKTOP);
+    } else {
+      setCurrentScreen(KILLIT)
+    }
+  }, [point, currentScreen]);
 
   function screenAndHamsterStats (killIt, hamsterDelete) {
     setCurrentScreen(killIt);
